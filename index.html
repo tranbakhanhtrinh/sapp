@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SAPP - HỌC CFA HÔM NAY NẮM TƯƠNG LAI TRONG TAY</title>
+    <link rel="preload" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" as="style" onload="this.rel = 'stylesheet'" />
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon" sizes="32x32" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet" />
+    <link rel="preload" href="./css/style.min.css" as="style" onload="this.rel = 'stylesheet'" />
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css" />
+    <script type="text/javascript">
+        function writeCookie(name, value, days) {
+            var date, expires;
+            if (days) {
+                date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var i,
+                c,
+                ca,
+                nameEQ = name + "=";
+            ca = document.cookie.split(";");
+            for (i = 0; i < ca.length; i++) {
+                c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ?
+                "" :
+                decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var utm_source = getParameterByName("utm_source");
+        var utm_medium = getParameterByName("utm_medium");
+        var utm_campaign = getParameterByName("utm_campaign");
+        var utm_term = getParameterByName("utm_term");
+        var utm_content = getParameterByName("utm_content");
+
+        if (utm_source != "") {
+            writeCookie("utm_source", utm_source, 30);
+            writeCookie("utm_medium", utm_medium, 30);
+            writeCookie("utm_campaign", utm_campaign, 30);
+            writeCookie("utm_term", utm_term, 30);
+            writeCookie("utm_content", utm_content, 30);
+        }
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+    <div class="btn_top">
+        <figure>
+            <img src="./assets/images/btn_top.png" alt="" class="img-fluid" />
+        </figure>
+    </div>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <figure>
+                        <img src="./assets/images/logo.svg" alt="" class="img-fluid mx-auto" />
+                    </figure>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mr-0">
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link active" href="#trangchu">
+                                <p>TRANG CHỦ</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#loiich">
+                                <p>LỢI ÍCH</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#why">
+                                <p>LỘ TRÌNH</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#giaovien">
+                                <p>Khóa học này dành cho ai</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#about-aes">
+                                <p>ĐỘI NGŨ</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="footer">
+                                <p>CẢM NHẬN HỌC VIÊN</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="bg1">
+            <section id="trangchu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <p>
+                                HỌC CFA HÔM NAY <span class="break"></span>
+                                NẮM TƯƠNG LAI TRONG TAY
+                            </p>
+                            <ul>
+                                <li>
+                                    Chinh phục CFA cùng
+                                    <span>100% giảng viên là CFA Charterholder</span>
+                                </li>
+                                <li>
+                                    <span>Cam kết chất lượng</span> đầu ra,
+                                    <span>miễn phí học lại</span> nếu không vượt qua kỳ thi CFA
+                                    gần nhất
+                                </li>
+                                <li><span>Hỗ trợ miễn phí</span> thủ tục đăng ký thi CFA</li>
+                                <li>
+                                    Quy mô lớp chỉ <span>30-35 học viên</span> đảm bảo chất
+                                    lượng học tập
+                                </li>
+                                <li>
+                                    Thư viện <span>giáo trình, tài liệu độc quyền</span> miễn
+                                    phí cùng môi trường học tập hiện đại
+                                </li>
+                                <li>
+                                    Cơ hội nhận nhiều <span>học bổng giá trị</span> và
+                                    <span>mở rộng net-working</span> cùng các chuyên gia tập
+                                    đoàn tài chính lớn
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-3 my-auto">
+                            <picture>
+                                <source srcset="./assets/images/trophy.png" />
+                                <img src="./assets/images/trophy.png" alt="Trophy" class="img-fluid d-block mx-auto" loading="lazy" />
+                            </picture>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <form>
+                                <p>
+                                    ĐĂNG KÝ TƯ VẤN<span class="break"></span> NHẬN ƯU ĐÃI LÊN
+                                    ĐẾN <span class="break"></span>
+                                    <span>45% HỌC PHÍ!</span>
+                                </p>
+                                <input type="text" id="fullname" class="field_input" placeholder="Họ & Tên" />
+                                <input type="tel" id="phone" class="field_input" placeholder="Số điện thoại" />
+                                <input type="email" id="email" class="field_input" placeholder="Email" />
+                                <select id="khuvuc" class="field_input">
+                                    <option value="">Khu vực</option>
+                                    <option value="HCM">HCM</option>
+                                    <option value="HN">HN</option>
+                                    <option value="DN">DN</option>
+                                </select>
+                                <button type="button" onclick="kiemtra()" class="field_register field_register_header">
+                                    <div>ĐĂNG KÝ NGAY</div>
+                                    <div class="lds-ring">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="chuongtrinh">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="outside-title">
+                                CHƯƠNG TRÌNH
+                                <p>ƯU ĐÃI THÁNG 9</p>
+                            </div>
+                            <div class="uudai">
+                                <div class="uudai__thuong">
+                                    <div class="uudai__thuong--gia">
+                                        <s>38.000.000đ</s>
+                                    </div>
+                                    <div class="uudai__thuong--lotrinh">
+                                        <p>
+                                            Đăng ký Lộ trình <br />
+                                            TỐI ƯU
+                                        </p>
+                                        <p>CFA Level 1+2</p>
+                                    </div>
+                                    <div class="uudai__thuong--nhan">
+                                        <p>
+                                            NHẬN ƯU ĐÃI LÊN TỚI <br />
+                                            <span>40% học phí</span>
+                                        </p>
+                                    </div>
+                                    <div class="uudai__thuong--tang">
+                                        <p>TẶNG NGAY</p>
+                                        <p>
+                                            Máy tính tài chính <br />
+                                            BA II Plus
+                                        </p>
+                                    </div>
+                                    <button type="button" class="uudai__thuong--dk">
+                                        ĐĂNG KÝ NHẬN ƯU ĐÃI
+                                    </button>
+                                </div>
+                                <div class="uudai__dacbiet">
+                                    <p class="uudai__dacbiet--title">
+                                        ĐĂNG KÝ HỌC <br />
+                                        CFA
+                                    </p>
+                                    <div class="uudai__dacbiet--nhan">
+                                        <p>NHẬN ƯU ĐÃI LÊN TỚI</p>
+                                        <p>45% Học phí</p>
+                                    </div>
+                                    <div class="uudai__dacbiet--special">
+                                        <p>ĐẶC BIỆT</p>
+                                        <p>
+                                            Khi đăng ký đóng <br />
+                                            nhóm bạn thân, nhận ngay <br />
+                                            <span>500,000đ</span> <br />
+                                            tiền mặt
+                                        </p>
+                                    </div>
+                                    <button type="button" class="uudai__dacbiet--dk">
+                                        ĐĂNG KÝ NHẬN ƯU ĐÃI
+                                    </button>
+                                </div>
+                                <div class="uudai__thuong">
+                                    <div class="uudai__thuong--gia">
+                                        <s>58.000.000đ</s>
+                                    </div>
+                                    <div class="uudai__thuong--lotrinh">
+                                        <p>
+                                            Đăng ký Lộ trình <br />
+                                            TOÀN DIỆN
+                                        </p>
+                                        <p>CFA Level 1+2+3</p>
+                                    </div>
+                                    <div class="uudai__thuong--nhan">
+                                        <p>
+                                            NHẬN ƯU ĐÃI LÊN TỚI <br />
+                                            <span>45% học phí</span>
+                                        </p>
+                                    </div>
+                                    <div class="uudai__thuong--tang">
+                                        <p>TẶNG NGAY</p>
+                                        <p>
+                                            Bộ Quà Tặng Độc Quyền <br />
+                                            Từ SAPP Academy
+                                        </p>
+                                    </div>
+                                    <button type="button" class="uudai__thuong--dk">
+                                        ĐĂNG KÝ NHẬN ƯU ĐÃI
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="loiich">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 pad0">
+                            <div class="title">
+                                <figure>
+                                    <img src="./assets/images/icon_title.png" alt="icon title" />
+                                </figure>
+                                <p>
+                                    6 LỢI ÍCH TUYỆT VỜI <span></span>
+                                    KHI HỌC CFA TẠI SAPP
+                                </p>
+                            </div>
+                            <div class="benefits">
+                                <div>
+                                    <div class="benefit">
+                                        <figure>
+                                            <img src="./assets/images/loiich1.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <div class="benefit__text">
+                                            <p>01</p>
+                                            <p>
+                                                <span>Đội ngũ giảng viên </span>
+                                                100% CFA Charterholder nhiều năm kinh nghiệm làm việc
+                                                trong lĩnh vực Tài chính.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="benefit">
+                                        <figure>
+                                            <img src="./assets/images/loiich2.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <div class="benefit__text">
+                                            <p>02</p>
+                                            <p>
+                                                <span>Cam kết chất lượng đầu ra </span>
+                                                Cam kết chất lượng đầu ra bằng văn bản, miễn phí học
+                                                lại nếu không đỗ kỳ thi CFA gần nhất.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="benefit">
+                                        <figure>
+                                            <img src="./assets/images/loiich3.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <div class="benefit__text">
+                                            <p>03</p>
+                                            <p>
+                                                <span>Test online miễn phí</span>
+                                                Test online sau mỗi môn học và thi thử cuối khóa MIỄN
+                                                PHÍ để đánh giá năng lực.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="benefit">
+                                        <figure>
+                                            <img src="./assets/images/loiich4.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <div class="benefit__text">
+                                            <p>04</p>
+                                            <p>
+                                                <span>Thư viện tài liệu pass CFA chuẩn</span>
+                                                Giáo trình và tài liệu học được biên soạn độc quyền
+                                                bởi SAPP Academy, liên tục cập nhật và bám sát đề thi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="benefit">
+                                        <figure>
+                                            <img src="./assets/images/loiich5.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <div class="benefit__text">
+                                            <p>05</p>
+                                            <p>
+                                                <span>Dịch vụ chăm sóc chuẩn Vàng</span>
+                                                Dịch vụ chăm sóc học viên 24/7: tea break, kho tài
+                                                liệu bổ trợ, file ghi âm… Hỗ trợ học viên làm thủ tục
+                                                đăng ký với Viện CFA.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="benefit">
+                                        <figure>
+                                            <img src="./assets/images/loiich6.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <div class="benefit__text">
+                                            <p>06</p>
+                                            <p>
+                                                <span>Cơ hội mở rộng networking</span>
+                                                Cơ hội mở rộng Networking với các chuyên gia trong
+                                                ngành thông qua các sự kiện lớn nhỏ: office tour, định
+                                                hướng nghề nghiệp, học bổng CFA,…
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="loiichsaudaotao">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 my-auto">
+                            <div class="margin-flw-screensize">
+                                <div class="title">
+                                    <figure>
+                                        <img src="./assets/images/icon_title.png" alt="icon title" />
+                                    </figure>
+                                    <p>LỢI ÍCH SAU ĐÀO TẠO</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <span>Sự thăng tiến về nghề nghiệp</span> - Mức lương cơ
+                                        bản của một CFA Charterholder tại Việt Nam là
+                                        <span>460.000.000VNĐ/năm.</span>
+                                    </li>
+                                    <li>
+                                        <span>Kiến thức nền tảng</span> - CFA tập trung vào
+                                        <span>kiến thức sâu rộng ngành tài chính</span> và đạo đức
+                                        nghề nghiệp. Đó là các kiến thức nền tảng mà các công ty
+                                        mong đợi, nhất là kỹ năng quản lý danh mục và phân tích
+                                        đầu tư.
+                                    </li>
+                                    <li>
+                                        <span>Lợi thế cạnh tranh</span> - CFA là lợi thế cạnh
+                                        tranh lớn đối với sinh viên năm cuối khi đi xin việc và
+                                        những bạn đang chuẩn bị hồ sơ du học. Có tới
+                                        <span>31.000 doanh nghiệp</span> trên toàn thế giới dùng
+                                        CFA để ra quyết định tuyển dụng và thăng chức.
+                                    </li>
+                                    <li>
+                                        <span>Được miễn giảm một số chứng chỉ chuyên môn ngành chứng
+                                            khoán</span>
+                                        - Nếu đỗ CFA Level 1 hoặc CFA Level 2 trở lên, trong kỳ
+                                        thi sát hạch nghề chứng khoán, bạn sẽ được miễn giảm tới
+                                        <span>5/7 chứng chỉ</span> chuyên môn.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 pad0">
+                            <picture>
+                                <source srcset="./assets/images/loiich.png" />
+                                <img src="./assets/images/loiich.png" alt="LỢI ÍCH SAU ĐÀO TẠO" class="img-fluid" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="lotrinh">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 pad0">
+                            <div class="title">
+                                <figure>
+                                    <img src="./assets/images/icon_title.png" alt="icon title" />
+                                </figure>
+                                <p>Lộ Trình Đặc Biệt Tại SAPP</p>
+                            </div>
+                            <div class="odd-line">
+                                <div class="odd-hinh">
+                                    <figure>
+                                        <img src="./assets/images/giaidoan1.png" alt="" class="img-fluid d-block" />
+                                    </figure>
+                                    <div class="odd-hinh__text">
+                                        <p>Giai đoạn 1</p>
+                                        <p>PREPARATION</p>
+                                    </div>
+                                </div>
+                                <div class="odd-text">
+                                    <p>
+                                        Trước thời gian tham gia lớp học, bạn sẽ được SAPP trang
+                                        bị những kiến thức nền tảng cần thiết như:
+                                    </p>
+                                    <ul>
+                                        <li>Cải thiện từ vựng chuyên ngành tài chính</li>
+                                        <li>Bổ sung kiến thức cơ bản ngành tài chính</li>
+                                        <li>Chuẩn bị các tài liệu bổ trợ cho khóa học CFA</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="even-line">
+                                <div class="even-text">
+                                    <p>
+                                        Giai đoạn này tập trung vào các khái niệm cơ bản về các và
+                                        sản phẩm đầu tư, tiêu chuẩn đạo đức nghề nghiệp, định giá
+                                        đầu tư và quản lý danh mục đầu tư, giúp bạn xây dựng nền
+                                        tảng vững chắc trong lĩnh vực tài chính và từ đó có thể
+                                        học tốt hơn ở các giai đoạn tiếp theo. <br />
+                                        Sau khi hoàn thành CFA Level 1, các bạn có thể nộp đơn ứng
+                                        tuyển vào các công ty chứng khoán, các công ty quản lý quỹ
+                                        và các ngân hàng. Cụ thể:
+                                    </p>
+                                    <div>
+                                        <p>Đối với công ty chứng khoán:</p>
+                                        <ul>
+                                            <li>
+                                                Vị trí môi giới: thường không yêu cầu nhiều về kinh
+                                                nghiệm làm việc
+                                            </li>
+                                            <li>
+                                                Vị trí tư vấn: thường yêu cầu nhiều về kinh nghiệm làm
+                                                việc
+                                            </li>
+                                            <li>
+                                                Vị trí đầu tư: thường yêu cầu kinh nghiệm làm việc từ
+                                                1 – 2 năm
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Đối với công ty quản lý quỹ:</p>
+                                        <ul>
+                                            <li>
+                                                Vị trí phân tích: thường yêu cầu kinh nghiệm 3 – 4 năm
+                                                + chứng chỉ chuyên ngành
+                                            </li>
+                                            <li>Vị trí quản lý: yêu cầu cao hơn</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Đối với ngân hàng:</p>
+                                        <ul>
+                                            <li>Vị trí trong phòng nguồn vốn</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Đối với doanh nghiệp:</p>
+                                        <ul>
+                                            <li>
+                                                Vị trí trong phòng tài chính doanh nghiệp, dự án mua
+                                                bán sáp nhập…
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="even-hinh">
+                                    <figure>
+                                        <img src="./assets/images/giaidoan2.png" alt="" class="img-fluid d-block" />
+                                    </figure>
+                                    <div class="even-hinh__text">
+                                        <p>Giai đoạn 2</p>
+                                        <p>FOUNDATION</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="odd-line">
+                                <div class="odd-hinh">
+                                    <figure>
+                                        <img src="./assets/images/giaidoan3.png" alt="" class="img-fluid d-block" />
+                                    </figure>
+                                    <div class="odd-hinh__text">
+                                        <p>Giai đoạn 3</p>
+                                        <p>ADVANCEMENT</p>
+                                    </div>
+                                </div>
+                                <div class="odd-text">
+                                    <p>
+                                        Giai đoạn này tập trung vào ứng dụng và phân tích các khái
+                                        niệm tài chính đã học ở giai đoạn 1, giúp bạn có kiến thức
+                                        <strong>chuyên sâu về định giá tài sản, phân tích tài chính,
+                                            vốn chủ sở hữu và thu nhập cố định.</strong>
+                                    </p>
+                                    <p>
+                                        Sau khi hoàn thành CFA Level 1 và Level 2, các bạn có rất
+                                        nhiều lợi thế lớn:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Được
+                                            <strong>miễn giảm 5/7 chứng chỉ chuyên môn chứng
+                                                khoán</strong>
+                                        </li>
+                                        <li>
+                                            Công việc:
+                                            <ol>
+                                                <li>Phân tích tài chính</li>
+                                                <li>Phân tích đầu tư</li>
+                                                <li>M&A</li>
+                                                <li>Thẩm định giá</li>
+                                                <li>Khối nguồn vốn,…</li>
+                                            </ol>
+                                        </li>
+                                        <li>Chuẩn bị các tài liệu bổ trợ cho khóa học CFA</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="even-line">
+                                <div class="even-text">
+                                    <p>
+                                        Giai đoạn này tập trung vào
+                                        <strong>quản trị danh mục đầu tư hiệu quả</strong>, giúp
+                                        bạn có kỹ năng quản lý danh mục đầu tư của các nhà đầu tư
+                                        tổ chức và cá nhân, phân bổ tài sản, ứng dụng quản lý rủi
+                                        ro và đánh giá hiệu suất danh mục đầu tư. <br />
+
+                                        Hoàn thành giai đoạn 3 có nghĩa là bạn đã
+                                        <strong>pass 3 level của CFA (Level 1, Level 2, Level
+                                            3)</strong>, bạn có cơ hội:
+                                    </p>
+
+                                    <ul>
+                                        <li>Trở thành CFA Charterholder</li>
+                                        <li>
+                                            Nắm giữ các vị trí quản lý cấp cao trong lĩnh vực tài
+                                            chính:
+                                            <ol>
+                                                <li>Quản lý quỹ (Fund management)</li>
+                                                <li>Đầu tư thay thế (Alternative investments)</li>
+                                                <li>Quản lý tài sản (Wealth management)</li>
+                                                <li>Ngân hàng đầu tư (Investment banking)</li>
+                                                <li>Quản trị rủi ro (Risk management)</li>
+                                                <li>Hành chính – nhân sự (Compliance)</li>
+                                                <li>Quỹ đầu tư tư nhân (Private Equity)</li>
+                                                <li>
+                                                    Nghiên cứu và phân tích (Research and Analysis)
+                                                </li>
+                                                <li>Tài chính doanh nghiệp (Corporate finance)</li>
+                                                <li>Tư vấn tài chính (Financial Advisory)</li>
+                                                <li>Khối nguồn vốn (Treasury)</li>
+                                                <li>Tài chính phát triển (Development Finance)</li>
+                                                <li>
+                                                    Đo lường hiệu quả hoạt động (Performance
+                                                    measurement)
+                                                </li>
+                                                <li>Tài chính cấu trúc (Structured finance)</li>
+                                            </ol>
+                                        </li>
+                                        <li>Đầu tư cá nhân</li>
+                                    </ul>
+                                </div>
+                                <div class="even-hinh">
+                                    <figure>
+                                        <img src="./assets/images/giaidoan4.png" alt="" class="img-fluid d-block" />
+                                    </figure>
+                                    <div class="even-hinh__text">
+                                        <p>Giai đoạn 4</p>
+                                        <p>PROFESSIONAL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="bg2">
+            <section id="who">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 pad0">
+                            <div class="outside">
+                                <div class="title-left">
+                                    <div class="title">
+                                        <figure>
+                                            <img src="./assets/images/icon_title.png" alt="icon title" />
+                                        </figure>
+                                        <p>
+                                            KHÓA HỌC NÀY<span></span>
+                                            DÀNH CHO AI?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="content-right">
+                                    <div class="each-row">
+                                        <figure>
+                                            <img src="./assets/images/who1.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <ul>
+                                            <li>
+                                                Cá nhân làm việc trong vị trí Tài chính doanh nghiệp,
+                                                phân tích nghiệp vụ và nghiệp vụ ngân hàng đầu tư.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="each-row">
+                                        <figure>
+                                            <img src="./assets/images/who2.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <ul>
+                                            <li>
+                                                Các nhà đầu tư tài chính chuyên nghiệp muốn nâng cao kiến thức và kỹ năng của họ lên cấp độ cao hơn để thăng tiến trong công việc.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="each-row">
+                                        <figure>
+                                            <img src="./assets/images/who3.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <ul>
+                                            <li>
+                                                Cá nhân muốn thay đổi con đường nghề nghiệp và có mối quan tâm lớn với thế giới đầu tư.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="each-row">
+                                        <figure>
+                                            <img src="./assets/images/who4.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                        <ul>
+                                            <li>
+                                                Sinh viên năm 3 và năm cuối đại học chuyên ngành kinh tế mong muốn tăng cơ hội thực tập và làm việc trong lĩnh vực tài chính và đầu tư ngay sau khi tốt nghiệp.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="giangvien">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="title">
+                                <figure>
+                                    <img src="./assets/images/icon_title.png" alt="icon title" />
+                                </figure>
+                                <p>
+                                    ĐỘI NGŨ GIẢNG VIÊN
+                                </p>
+                            </div>
+                            <div class="doingu">
+                                <div>
+                                    <figure>
+                                        <img src="./assets/images/gv1.png" alt="Giảng viên Trần Trọng Kiên" class="img-fluid d-block mx-auto" />
+                                    </figure>
+                                    <p class="giangvien__name">
+                                        Mr. <strong>Trần Trọng Kiên</strong>
+                                    </p>
+                                    <p class="giangvien__position">
+                                        CFA Charterholder <br />
+                                        Phó phòng Nghiên cứu Phát triển - Sở Giao dịch Chứng khoán Hà Nội
+                                    </p>
+                                </div>
+                                <div>
+                                    <figure>
+                                        <img src="./assets/images/gv2.png" alt="Giảng viên Đỗ Thu Phương" class="img-fluid d-block mx-auto" />
+                                    </figure>
+                                    <p class="giangvien__name">
+                                        Ms. <strong>Đỗ Thu Phương</strong>
+                                    </p>
+                                    <p class="giangvien__position">
+                                        CFA Charterholder <br />
+                                        Phân tích định lượng - Công ty CP Chứng khoán Ngân hàng BIDV
+                                    </p>
+                                </div>
+                                <div>
+                                    <figure>
+                                        <img src="./assets/images/gv3.png" alt="Giảng viên Nguyễn Tấn Quang Vinh" class="img-fluid d-block mx-auto" />
+                                    </figure>
+                                    <p class="giangvien__name">
+                                        Mr. <strong>Nguyễn Tấn Quang Vinh</strong>
+                                    </p>
+                                    <p class="giangvien__position">
+                                        CFA Charterholder <br />
+                                        Chuyên viên Đầu tư cao cấp tại RED Capital
+                                    </p>
+                                </div>
+                                <div>
+                                    <figure>
+                                        <img src="./assets/images/gv4.png" alt="Giảng viên Nguyễn Hoàng Quý" class="img-fluid d-block mx-auto" />
+                                    </figure>
+                                    <p class="giangvien__name">
+                                        Mr. <strong>Nguyễn Hoàng Quý</strong>
+                                    </p>
+                                    <p class="giangvien__position">
+                                        CFA Charterholder <br />
+                                        Chuyên viên Phân tích đầu tư tại International Finance Corporation
+                                    </p>
+                                </div>
+                                <div>
+                                    <figure>
+                                        <img src="./assets/images/gv5.png" alt="Giảng viên Hứa Tấn Trung" class="img-fluid d-block mx-auto" />
+                                    </figure>
+                                    <p class="giangvien__name">
+                                        Mr. <strong>Hứa Tấn Trung</strong>
+                                    </p>
+                                    <p class="giangvien__position">
+                                        CFA Charterholder <br />
+                                        Senior Consultant - Financial Services Advisory tại EY VIETNAM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <section id="camnhan">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="camnhan-hocvien">
+                            <div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <figure>
+                                            <img src="./assets/images/hv1.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="hv_comment">
+                                            “Mình đang làm trong lĩnh vực tài chính và thấy rằng CFA là 1 chứng chỉ rất cần thiết cho nghề nghiệp. Các thầy cô đều rất tâm huyết và có chuyên môn cao, môi trường học cũng như dịch vụ hỗ trợ tại SAPP rất phù hợp với người bận rộn như mình giúp mình không bỏ lỡ kiến thức trên lớp và có thể ôn luyện được dễ dàng.”
+                                        </p>
+                                        <div class="hv_name_post">
+                                            <p>
+                                                ĐẶNG HOÀI PHƯƠNG
+                                            </p>
+                                            <p>
+                                                Chuyên viên tài chính
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <figure>
+                                            <img src="./assets/images/hv2.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="hv_comment">
+                                            “Trái với lo ngại ban đầu của mình về kiến thức chuyên ngành tài chính trong giáo trình CFA nặng và khó, môi trường học tập thoải mái tại SAPP giúp mình tự tin hơn nhiều. Ngoài việc học trên lớp, mình còn được hỗ trợ thêm nhiều tài liệu như từ điển CFA, mind map và nhiều tài liệu được biên soạn độc quyền của SAPP.”
+                                        </p>
+                                        <div class="hv_name_post">
+                                            <p>
+                                                NGUYỄN TRỌNG THÀNH
+                                            </p>
+                                            <p>
+                                                SV năm cuối HV Ngân hàng
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <figure>
+                                            <img src="./assets/images/hv3.png" alt="" class="img-fluid d-block" />
+                                        </figure>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="hv_comment">
+                                            “Mình có dự định du học nên quyết định học CFA để cải thiện nền tảng kiến thức. May mắn tại SAPP, mình được học lớp dành riêng cho sinh viên nên đảm bảo phù hợp với đầu vào, đặc biệt được các anh chị giảng viên hỗ trợ nhiệt tình và truyền nhiều kinh nghiệm thực tế hữu ích. Vì thế việc học CFA của mình dễ dàng hơn rất nhiều.”
+                                        </p>
+                                        <div class="hv_name_post">
+                                            <p>
+                                                PHẠM MAI KHANH
+                                            </p>
+                                            <p>
+                                                SV năm cuối ĐH Kinh tế quốc dân
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="form_ft">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <figure>
+                            <img src="./assets/images/map.png" alt="" class="img-fluid d-block" />
+                        </figure>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>
+                            ĐĂNG KÝ NGAY ĐỂ NHẬN ƯU ĐÃI <br />
+                            <strong>LÊN ĐẾN 45% HỌC PHÍ!</strong>
+                        </p>
+                        <form>
+                            <input type="text" id="fullname_ft" class="field_input field_input--border" placeholder="Họ & Tên" />
+                            <input type="tel" id="phone_ft" class="field_input field_input--border" placeholder="Số điện thoại" />
+                            <input type="email" id="email_ft" class="field_input field_input--border" placeholder="Email" />
+                            <select id="khuvuc_ft" class="field_input field_input--border">
+                                <option value="">Khu vực</option>
+                                <option value="HCM">HCM</option>
+                                <option value="HN">HN</option>
+                                <option value="DN">DN</option>
+                            </select>
+                            <button type="button" onclick="kiemtra_ft()" class="field_register field_register--greenBg field_register_footer">
+                                <div>ĐĂNG KÝ NGAY</div>
+                                <div class="lds-ring">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="thongtin">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="./assets/images/logo_ft.png" alt="" class="img-fluid d-block" />
+                        </figure>
+                        <p>
+                            <strong>SAPP Academy</strong> <br />
+                            Học viện dẫn đầu trong lĩnh vực đào tạo Tài chính, Kế toán, Kiểm toán, Thuế chất lượng cao tại Hà Nội và TP. Hồ Chí Minh.
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="title_ft">
+                            Cơ sở học
+                        </p>
+                        <p>
+                            Tầng 5, Tòa nhà Đức Đại, số 54 Lê Thanh Nghị, Bạch Mai, quận Hai Bà Trưng, HN.
+                        </p>
+                        <p>
+                            Lầu 3A, Tòa nhà Nikko, Số 374 – 374B Võ Văn Tần, Phường 5, Quận 3, HCM.
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="title_ft">
+                            Thời gian học
+                        </p>
+                        <p>
+                            Sáng (thứ 7 & chủ nhật): 8h00 – 11h00
+                        </p>
+                        <p>
+                            Chiều (thứ 7 & chủ nhật): 14h00 – 17h00
+                        </p>
+                        <p>
+                            Tối (Các ngày trong tuần): 18h30 – 21h30
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        ©2020 SAPP Academy
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <picture>
+                        <source srcset="./assets/images/Certificate.jpg" />
+                        <img src="./assets/images/Certificate.jpg" alt="Certificate" class="img-fluid d-block mx-auto mb-1rem" />
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="./js/common.js?v=3"></script>
+</body>
+
+</html>
