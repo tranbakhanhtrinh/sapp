@@ -560,8 +560,16 @@ main {
 
 #loiichsaudaotao {
     .margin-flw-screensize {
+        @media screen and (min-width: 1200px) and (max-width:1599px) {
+            margin-left: calc((100vw - 1140px) / (2));
+        }
+
         @media screen and (min-width: 1600px) {
             margin-left: calc((100vw - 1350px) / (2));
+        }
+
+        @media screen and (min-width: 2500px) {
+            margin-left: calc((1920px - 1350px) / (2));
         }
     }
 
@@ -1177,92 +1185,6 @@ select {
         .navbar-toggler {
             margin-right: 0px;
             margin-left: auto;
-        }
-    }
-
-    #trangchu {
-        background-position: left;
-
-        p {
-            .break {
-                display: inline;
-            }
-        }
-    }
-
-    #header2 {
-        padding-bottom: 0;
-    }
-
-    #why {
-        .outside-title {
-            margin-top: 2rem;
-
-            .title1 {
-                hr {
-                    width: 20%;
-                }
-            }
-        }
-
-        .content {
-            padding: 2rem 1rem;
-        }
-    }
-
-    #ketqua {
-        .outside-title {
-            .title {
-                .break {
-                    display: inline;
-                }
-            }
-        }
-    }
-
-    #quanly {
-        .bg-tim {
-            margin-top: 2rem;
-            padding: 2rem 1rem;
-        }
-    }
-
-    #giaovien {
-        .outside-title {
-            hr {
-                width: 7%;
-            }
-        }
-
-        .content {
-            padding: 2rem 1rem;
-        }
-    }
-
-    #dieukien {
-        padding: 2rem 0;
-
-        .title {
-            margin-bottom: 2rem;
-        }
-    }
-
-    #about-aes,
-    #about-haileybury {
-        .content {
-            padding: 2rem 1rem;
-        }
-    }
-
-    #thanks {
-        p {
-            &:first-of-type {
-                font-size: 1.5rem;
-            }
-
-            .break {
-                display: inline;
-            }
         }
     }
 }
