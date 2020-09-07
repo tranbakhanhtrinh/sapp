@@ -39,7 +39,7 @@ if(!isset($_SESSION['username']))
 	<script type="text/javascript">
         $(document).ready(function() {
             var table = $('#example').DataTable({
-                "order": [[ 4, "desc" ]],
+                "order": [[ 5, "desc" ]],
                 dom: 'Brtip',// f : filter
                 buttons: [
                     'copyHtml5',
@@ -73,7 +73,7 @@ if(!isset($_SESSION['username']))
                   format: 'YYYY-MM-DD',
                    "cancelLabel": "Clear",
                 },
-                startDate: '2020-04-01',
+                startDate: '2020-09-01',
                 endDate: '2020-12-30'
                 //autoUpdateInput: false,
             }
@@ -102,8 +102,8 @@ if(!isset($_SESSION['username']))
                     var give_results_daterange = grab_daterange.split(" - ");
                     var filterstart = give_results_daterange[0];
                     var filterend = give_results_daterange[1];
-                    var iStartDateCol = 4; //using column 2 in this instance
-                    var iEndDateCol = 4;
+                    var iStartDateCol = 5; //using column 2 in this instance
+                    var iEndDateCol = 5;
                     var tabledatestart = aData[iStartDateCol].substring(0,10);
                     var tabledateend= aData[iEndDateCol].substring(0,10);
                     console.log(tabledatestart);
@@ -177,6 +177,7 @@ if(!isset($_SESSION['username']))
                 <th>Họ Và tên</th>
                 <th>Số điện thoại</th>
                 <th>Email</th>
+                <th>Khu vực</th>
                 <th>utm_source</th>
                 <th>Ngày tạo</th>
             </tr>
@@ -188,6 +189,7 @@ if(!isset($_SESSION['username']))
                 <td><input type="text" placeholder="Tìm theo Họ và tên " /></td>
                 <td><input type="text" placeholder="Tìm theo Sđt " /></td>
                 <td><input type="text" placeholder="Tìm theo Email " /></td>
+                <td><input type="text" placeholder="Tìm theo Khu vực " /></td>
                 <td><input type="text" placeholder="Tìm theo utm_source " /></td>
                 <td><input type="text" name="daterange" id="daterange"></td>
             </tr>
@@ -201,6 +203,7 @@ if(!isset($_SESSION['username']))
                 <td><?php echo $row['name'] ?></td>
                 <td><?php echo $row['phone'] ?></td>     
                 <td><?php echo $row['email'] ?></td>
+                <td><?php echo $row['khuvuc'] ?></td>
                 <td><?php echo $row['utm_source'] ?></td>
                 <td><?php echo $row['date_create'] ?></td>
             </tr>

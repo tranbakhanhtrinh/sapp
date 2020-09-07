@@ -7,10 +7,10 @@ $database = "aes";
  */
 function DBConfig()
 {
-    $servername = "112.213.89.140";
-    $username = "vinst397_aes";
-    $password = "8z9k[Y*4ZwuU";
-    $database = "vinst397_aes";
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $database = "sapp";
     return array(
         'servername' => $servername,
         'username' => $username,
@@ -91,13 +91,13 @@ $conn->query($sql);
 }
  */
 
-function insertregister($fullname, $phone, $email, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
+function insertregister($fullname, $phone, $email,$khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
 {
     try {
         $DB = dbConnectPDO();
         $result = $DB->query(
-            "INSERT INTO registers(name,phone,email,utm_source,utm_medium,utm_campaign,utm_term,utm_content,date_create) VALUES(?,?,?,?,?,?,?,?,?)",
-            array($fullname, $phone, $email, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
+            "INSERT INTO registers(name,phone,email,khuvuc,utm_source,utm_medium,utm_campaign,utm_term,utm_content,date_create) VALUES(?,?,?,?,?,?,?,?,?,?)",
+            array($fullname, $phone, $email,$khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
         );
         $DB->CloseConnection;
         if ($result) {

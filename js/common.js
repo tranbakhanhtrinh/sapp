@@ -1,4 +1,5 @@
 $(function () {
+    $('.lazy').Lazy();
     $('body').on('click', '.page-scroll a', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -16,9 +17,9 @@ $(function () {
             scrollTop: $('#trangchu').offset().top - 80
         }, 600);
     });
-    $(".dk").on('click', function () {
+    $(".uudai__btnDk_js").on('click', function () {
         $('html, body').animate({
-            scrollTop: $('#dangky').offset().top - 80
+            scrollTop: $('#trangchu').offset().top - 80
         }, 600);
     });
 
@@ -47,6 +48,13 @@ $(function () {
             },
             {
                 breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 360,
                 settings: {
                     arrows: false,
                     slidesToShow: 1

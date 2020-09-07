@@ -1,16 +1,25 @@
 @font-face {
     font-family: "Bold";
     src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
 }
 
 @font-face {
     font-family: "Medium";
     src: url("../assets/fonts/Roboto-Medium.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
 }
 
 @font-face {
     font-family: "Regular";
     src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
 }
 
 @keyframes opacity {
@@ -35,9 +44,21 @@ html {
     background-color: #fff;
 }
 
+@media screen and (min-width: 1300px) {
+    .container {
+        max-width: 1240px;
+    }
+}
+
 @media screen and (min-width: 1600px) {
     .container {
         max-width: 1350px;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    .container {
+        max-width: 1600px;
     }
 }
 
@@ -123,7 +144,7 @@ p {
             display: block;
         }
 
-        @media screen and (min-width: 1200px) and (max-width: 1600px) {
+        @media screen and (max-width: 575.98px) {
             font-size: 1.8rem;
         }
     }
@@ -204,9 +225,14 @@ header {
                         p {
                             margin-bottom: 0;
                             color: #fff;
-                            font-family: "Fira Sans";
                             font-weight: 400;
                             text-transform: uppercase;
+                        }
+
+                        &.active {
+                            p {
+                                font-family: $font_Bold;
+                            }
                         }
                     }
                 }
@@ -253,6 +279,12 @@ main {
 #trangchu {
     padding: 2rem 0;
 
+    @media screen and (min-width: 1600px) {
+        .pad-right-lg-0 {
+            padding-right: 0
+        }
+    }
+
     p {
         font-size: 2.25rem;
         color: #009966;
@@ -263,9 +295,10 @@ main {
     ul {
         list-style-type: none;
         line-height: 218.19%;
+        padding-inline-start: 25px;
 
         li {
-            color: rgba(0, 0, 0, 0.5);
+            color: rgba(0, 0, 0, 0.8);
             font-size: 0.875rem;
             position: relative;
 
@@ -278,7 +311,7 @@ main {
                 content: url("../assets/images/checkmark.png");
                 position: absolute;
                 top: 0px;
-                left: -30px;
+                left: -25px;
             }
         }
     }
@@ -302,8 +335,8 @@ main {
             }
         }
 
-        @media screen and (min-width: 1200px) {
-            // width: 350px;
+        @media screen and (min-width: 1200px) and (max-width: 1499px) {
+            width: 310px;
             margin-left: auto;
             margin-right: 0;
         }
@@ -447,6 +480,10 @@ main {
 
                     &:last-of-type {
                         font-size: 1.125rem;
+
+                        strong {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
@@ -514,6 +551,11 @@ main {
 
             figure {
                 margin-bottom: 0;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
             }
 
             &__text {
@@ -557,8 +599,8 @@ main {
 
 #loiichsaudaotao {
     .margin-flw-screensize {
-        @media screen and (min-width: 1200px) and (max-width:1599px) {
-            margin-left: calc((100vw - 1140px) / (2));
+        @media screen and (min-width: 1300px) and (max-width:1599px) {
+            margin-left: calc((100vw - 1240px) / (2));
         }
 
         @media screen and (min-width: 1600px) {
@@ -566,7 +608,7 @@ main {
         }
 
         @media screen and (min-width: 2500px) {
-            margin-left: calc((1920px - 1350px) / (2));
+            margin-left: calc((100vw - 1600px) / (2));
         }
     }
 
@@ -579,7 +621,7 @@ main {
         line-height: 218.19%;
 
         li {
-            color: rgba(0, 0, 0, 0.5);
+            color: rgba(0, 0, 0, 0.8);
             font-size: 0.875rem;
             position: relative;
 
@@ -675,6 +717,7 @@ main {
 
     .even-line {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         background: #FFFAE8;
@@ -768,6 +811,7 @@ main {
 #who {
     .outside {
         display: flex;
+        flex-direction: row;
 
         .title-left {
             background: linear-gradient(93.68deg, #1D976C -1.29%, #93F9B9 195.78%);
@@ -784,6 +828,10 @@ main {
                     color: #fff;
                 }
             }
+
+            @media screen and (min-width:2500px) {
+                width: 50%;
+            }
         }
 
         .content-right {
@@ -794,7 +842,7 @@ main {
             .each-row {
                 display: flex;
                 align-items: center;
-                // justify-content: center;
+                flex-direction: row;
 
                 figure {
                     margin-bottom: 0;
@@ -859,7 +907,7 @@ main {
 
 #camnhan {
     background: #F2F2F2;
-    padding: 4rem 0;
+    padding: 4rem 0 3rem;
 
     .camnhan-hocvien {
         .hv_comment {
@@ -867,12 +915,12 @@ main {
             line-height: 134.19%;
             font-size: 0.75rem;
             text-align: justify;
-            padding-right: 0.9375rem;
+            padding-right: 1.875rem;
         }
 
         .hv_name_post {
             margin-left: auto;
-            margin-right: 0.9375rem;
+            margin-right: 1.875rem;
             width: intrinsic;
             width: -moz-max-content;
             width: -webkit-max-content;
@@ -900,6 +948,10 @@ main {
         color: #009966;
         font-size: 1.5rem;
         text-transform: uppercase;
+    }
+
+    iframe {
+        width: 100%;
     }
 
     form {
@@ -995,50 +1047,65 @@ footer {
 }
 
 #thanks {
-    @include background(url("../assets/images/bg-banner1.png"),
+    @include background(url("../assets/images/bg_thanks.png"),
         no-repeat,
         cover,
         center);
-    margin-top: -101.59px;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-bottom: 0;
 
-    .content {
-        padding: 0 1rem;
+    .outside {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
     }
 
-    p {
-        text-align: center;
-        color: #fff;
-        font-family: $font_Regular;
+    .content-left {
+        padding-left: 3rem;
 
-        &:first-of-type {
-            font-size: 2rem;
-            font-family: $font_Bold;
-            text-transform: uppercase;
-        }
+        p {
+            color: rgba(0, 0, 0, 0.84);
+            font-size: 1.25rem;
 
-        &:last-of-type {
-            margin-bottom: 3rem;
+            &:first-of-type {
+                color: #009966;
+                font-size: 1.6rem;
+                position: relative;
+
+                &:before {
+                    content: url("../assets/images/check_thanks.png");
+                    position: absolute;
+                    left: -3rem;
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 2rem;
+            }
+
+            span {
+                display: block;
+            }
         }
     }
 
     a {
-        text-transform: capitalize;
         padding: 1rem 2rem;
         text-align: center;
         font-family: $font_Bold;
-        color: #5c1548;
-        background: #d186bc;
+        font-size: 1.125rem;
+        color: #000;
+        background: #FFD319;
         @include border-radius(0px);
 
         &:hover {
             color: #fff;
             text-decoration: none;
         }
+    }
+
+    figure {
+        margin-bottom: 0;
+        margin-top: 7rem;
     }
 }
 
@@ -1163,15 +1230,15 @@ select {
     }
 }
 
-@media screen and (min-width: 2500px) {
+// @media screen and (min-width: 2500px) {
 
-    body,
-    html,
-    header {
-        max-width: 1920px;
-        margin: auto;
-    }
-}
+//     body,
+//     html,
+//     header {
+//         max-width: 1920px;
+//         margin: auto;
+//     }
+// }
 
 @media (max-width: 575.98px) {
     .navbar-light {
@@ -1182,6 +1249,126 @@ select {
         .navbar-toggler {
             margin-right: 0px;
             margin-left: auto;
+        }
+    }
+
+    #trangchu {
+        form {
+            margin-top: 1rem;
+        }
+    }
+
+    #chuongtrinh {
+        .uudai {
+            display: block;
+
+            &__thuong {
+                padding: 2rem;
+            }
+
+            &__dacbiet {
+                padding: 2rem;
+                margin: 2rem 0;
+            }
+        }
+    }
+
+    #lotrinh {
+        .odd-line {
+            display: block;
+
+            .odd-text {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+
+        .even-line {
+            flex-direction: column;
+
+            .even-text {
+                width: 100%;
+                padding: 1rem;
+
+                ul {
+                    li {
+                        ol {
+                            column-count: 1;
+                            list-style-position: outside;
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #who {
+        padding-top: 0;
+
+        .outside {
+            flex-direction: column;
+
+            .title-left {
+                width: 100%;
+                padding: 1rem 0;
+            }
+
+            .content-right {
+                margin-left: 0;
+
+                .each-row {
+                    flex-direction: column;
+
+                    ul {
+                        margin-left: 0;
+                        margin-top: .8rem;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #camnhan {
+        .camnhan-hocvien {
+            .slick-slide {
+                padding: 0 1rem;
+            }
+
+            figure {
+                img {
+                    margin: auto;
+                }
+            }
+
+            .hv_comment {
+                padding-right: 0;
+            }
+
+            .hv_name_post {
+                margin-right: 0;
+            }
+        }
+    }
+
+    #form_ft {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    #thanks {
+        .outside {
+            flex-direction: column;
+
+            .content-left {
+                p {
+                    span {
+                        display: inline;
+                    }
+                }
+            }
         }
     }
 }
