@@ -1,5 +1,7 @@
 $(function () {
     $('.lazy').Lazy();
+    $('#khuvuc').select2();
+    $('#khuvuc_ft').select2();
     $('body').on('click', '.page-scroll a', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -72,14 +74,24 @@ $(function () {
                 breakpoint: 768,
                 settings: {
                     arrows: false,
-                    slidesToShow: 5
+                    slidesToShow: 5,
+                    dots: true,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     arrows: false,
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    dots: true,
                 }
             }
         ]
@@ -95,14 +107,24 @@ $(function () {
                 breakpoint: 768,
                 settings: {
                     arrows: false,
-                    slidesToShow: 3
+                    slidesToShow: 3,
+                    dots: true,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     arrows: false,
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    dots: true,
                 }
             }
         ]
@@ -161,11 +183,11 @@ function kiemtra() {
         $('#phone').focus();
         return false;
     }
-    else if (!isValidEmail($('#email').val())) {
-        alert("Email bạn điền không hợp lệ !");
-        $('#email').focus();
-        return false;
-    }
+    // else if (!isValidEmail($('#email').val())) {
+    //     alert("Email bạn điền không hợp lệ !");
+    //     $('#email').focus();
+    //     return false;
+    // }
     else if ($('#khuvuc').val() == "") {
         alert("Vui lòng chọn Khu vực !");
         $('#khuvuc').focus();
@@ -203,11 +225,11 @@ function kiemtra_ft() {
         $('#phone_ft').focus();
         return false;
     }
-    else if (!isValidEmail($('#email_ft').val())) {
-        alert("Email bạn điền không hợp lệ !");
-        $('#email_ft').focus();
-        return false;
-    }
+    // else if (!isValidEmail($('#email_ft').val())) {
+    //     alert("Email bạn điền không hợp lệ !");
+    //     $('#email_ft').focus();
+    //     return false;
+    // }
     else if ($('#khuvuc_ft').val() == "") {
         alert("Vui lòng chọn Khu vực !");
         $('#khuvuc_ft').focus();

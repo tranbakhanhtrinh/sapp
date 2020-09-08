@@ -7,10 +7,10 @@ $database = "aes";
  */
 function DBConfig()
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $database = "sapp";
+    $servername = "112.213.89.140";
+    $username = "vinst397_cfa_sapp";
+    $password = "qKrUeIl(hOG^";
+    $database = "vinst397_cfa_sapp";
     return array(
         'servername' => $servername,
         'username' => $username,
@@ -91,13 +91,13 @@ $conn->query($sql);
 }
  */
 
-function insertregister($fullname, $phone, $email,$khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
+function insertregister($fullname, $phone, $email, $khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
 {
     try {
         $DB = dbConnectPDO();
         $result = $DB->query(
             "INSERT INTO registers(name,phone,email,khuvuc,utm_source,utm_medium,utm_campaign,utm_term,utm_content,date_create) VALUES(?,?,?,?,?,?,?,?,?,?)",
-            array($fullname, $phone, $email,$khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
+            array($fullname, $phone, $email, $khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
         );
         $DB->CloseConnection;
         if ($result) {
