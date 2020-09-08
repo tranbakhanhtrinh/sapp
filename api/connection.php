@@ -91,13 +91,13 @@ $conn->query($sql);
 }
  */
 
-function insertregister($fullname, $phone, $email, $khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
+function insertregister($fullname, $phone, $email, $khuvuc,$form, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
 {
     try {
         $DB = dbConnectPDO();
         $result = $DB->query(
-            "INSERT INTO registers(name,phone,email,khuvuc,utm_source,utm_medium,utm_campaign,utm_term,utm_content,date_create) VALUES(?,?,?,?,?,?,?,?,?,?)",
-            array($fullname, $phone, $email, $khuvuc, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
+            "INSERT INTO registers(name,phone,email,khuvuc,form,utm_source,utm_medium,utm_campaign,utm_term,utm_content,date_create) VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+            array($fullname, $phone, $email, $khuvuc,$form, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create)
         );
         $DB->CloseConnection;
         if ($result) {

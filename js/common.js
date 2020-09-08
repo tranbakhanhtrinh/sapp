@@ -198,11 +198,12 @@ function kiemtra() {
         const fullname = $('#fullname').val();
         const email = $('#email').val();
         const khuvuc = $('#khuvuc').val();
+        const form_header = $('#form_header').val();
         $(".field_register_header").attr('disabled', 'disabled');
         $.ajax({
             type: "POST",
             url: "api/register.php",
-            data: { fullname: fullname, email: email, phone: phone, khuvuc: khuvuc },
+            data: { fullname: fullname, email: email, phone: phone, khuvuc: khuvuc, form: form_header },
             success: function (data) {
                 data = JSON.parse(data);
                 if (data.result === "0") {
@@ -240,11 +241,12 @@ function kiemtra_ft() {
         const fullname = $('#fullname_ft').val();
         const email = $('#email_ft').val();
         const khuvuc = $('#khuvuc_ft').val();
+        const form_footer = $('#form_footer').val();
         $(".field_register_footer").attr('disabled', 'disabled');
         $.ajax({
             type: "POST",
             url: "api/register.php",
-            data: { fullname: fullname, email: email, phone: phone, khuvuc: khuvuc },
+            data: { fullname: fullname, email: email, phone: phone, khuvuc: khuvuc, form: form_footer },
             success: function (data) {
                 data = JSON.parse(data);
                 if (data.result === "0") {
